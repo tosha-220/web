@@ -1,7 +1,14 @@
 package main;
 
+import model.Contact;
+import model.ContactType;
+import model.Link;
+
 public class Main {
+
+
     public static void main(String[] args) {
-        System.out.println("second");
+        Contact c= new Contact(ContactType.PHONE,"124324");
+
     }
 }
