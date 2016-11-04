@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -8,7 +9,7 @@ public class Resume {
     private String fullName;
     private String location;
     private String homePage;
-    private List<Contact> contacts;
+    private List<Contact> contacts=new ArrayList<Contact>();
     private List<Section> sections;
 
 
@@ -28,6 +29,7 @@ public class Resume {
     }
 
     public void addContact(Contact contact) {
+
         contacts.add(contact);
     }
 
