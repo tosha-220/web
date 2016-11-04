@@ -10,6 +10,19 @@ public class Link {
         this.url = url;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public Link() {
+        this("dsd",null);
+
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
