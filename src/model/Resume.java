@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class Resume implements Comparable<Resume>{
-    private String uuid;
+    private final String uuid;
     private String fullName;
     private String location;
     private String homePage;
@@ -38,30 +38,15 @@ public class Resume implements Comparable<Resume>{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Resume resume = (Resume) o;
+        final Resume resume = (Resume) o;
 
-        if (uuid != null ? !uuid.equals(resume.uuid) : resume.uuid != null) return false;
-        if (fullName != null ? !fullName.equals(resume.fullName) : resume.fullName != null) return false;
-        if (location != null ? !location.equals(resume.location) : resume.location != null) return false;
-        if (homePage != null ? !homePage.equals(resume.homePage) : resume.homePage != null) return false;
-        if (contacts != null ? !contacts.equals(resume.contacts) : resume.contacts != null) return false;
-        return sections != null ? sections.equals(resume.sections) : resume.sections == null;
+        return uuid .equals(resume.uuid);
 
     }
 
     @Override
     public int hashCode() {
-        int result = uuid != null ? uuid.hashCode() : 0;
-        result = 31 * result + (fullName != null ? fullName.hashCode() : 0);
-        result = 31 * result + (location != null ? location.hashCode() : 0);
-        result = 31 * result + (homePage != null ? homePage.hashCode() : 0);
-        result = 31 * result + (contacts != null ? contacts.hashCode() : 0);
-        result = 31 * result + (sections != null ? sections.hashCode() : 0);
-        return result;
-    }
-
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
+        return uuid.hashCode();
     }
 
     public void setFullName(String fullName) {
